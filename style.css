@@ -1,0 +1,149 @@
+html,body,textarea{
+	padding:0;
+	margin:0;
+	height: 100%;
+	font-family: monospace;
+	font-size: 13px;
+	font-style: normal;
+}
+
+button,input {
+	font:normal 13px Verdana, Geneva, sans-serif;
+	font-style:normal;
+	color:#ffffff;
+	background:#516399;
+	border:1px solid #bbb;
+	height:1.8em;
+}
+
+input[type=file] {
+	height:1.6em;
+}
+
+textarea:focus{
+	outline: 3px solid #516399;
+}
+
+#container {
+    position: relative;
+    height: 41.5em;
+    overflow: hidden;
+}
+
+#wrap-left{
+	width:54em;
+	height:41em;
+	float: left;
+	padding: 2px;
+}
+
+#wrap-right{
+	margin-left: 54em;
+	height: 41em;
+	padding: 2px;
+}
+
+#monitor{
+	display: inline-block;
+	border: 1px solid #516399;
+}
+
+#monitor:focus{
+	outline: 3px solid #516399;
+}
+
+#input{
+	width:95%;
+	height:37em;
+	padding-left: 2px;
+	resize: none;
+	color:#516399;
+	border: 1px solid #516399;
+}
+
+#hint{
+	width:95%;
+	height:1em;
+	color:#516399;
+}
+
+#hint b{
+	color:#90C695;
+}
+
+#hint i{
+	color:#777;
+}
+
+#menu{
+	width:60em;
+	height: 2em;
+	margin: auto;
+}
+
+#ram{
+	width:53em;
+	height:15em;
+	resize: none;
+	color:#516399;
+	border: 1px solid #516399;
+}
+
+#debug{
+	width:5em;
+	height:23em;
+	float:left;
+}
+
+#output{
+	image-rendering: pixelated;
+	width:37em;
+	float:left;
+}
+
+#codePreviev{
+	width:11em;
+	height:23em;
+	float:left;
+}
+
+#alert {
+	width:97%;
+	min-height:2em;
+	border: 1px solid #516399;
+}
+
+.header{
+	width: 10em;
+	display: inline-block;
+	border: 1px solid #516399;
+	border-bottom: none;
+	text-align:center;
+}
+
+.column{
+	width:2.7em;
+	float:left;
+}
+
+.thisip,.change{
+	background-color:#516399;
+	color:#FFF;
+}
+
+@media screen and (max-width: 60em) {
+	#menu{
+		width:100%;
+		height:4em;
+	}
+	
+	#container{
+		overflow:auto;
+	}
+	
+	#wrap-right{
+		margin-left: 0;
+		height: 41em;
+		padding: 2px;
+	}
+}

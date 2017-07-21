@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<title>8086test</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#7CCD7C">
+</head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<body onkeypress="handle(event)">
+	<div id="menu">
+		<input type="file" id="file" />
+		<button onclick="loadFromTextArea()">load from memory</button>
+		<button onclick="compiletocom();">compile</button>
+		<button onclick="savecom();">save</button>
+		<button onclick="run();">play</button>
+		<button onclick="stop();">stop</button>
+		<button onclick="stop();exec86(1);debug();">step</button>
+		<button onclick="stop();init86();clearScreen();">reset</button>
+	</div>
+	<div id="container">
+		<div id="wrap-left">
+			<div class="header">memory</div>
+			<textarea id="ram"></textarea>
+			<div class="header">monitor</div>
+			<div id="monitor">
+				<div id="debug"></div>
+				<canvas id="output" width="640" height="400"></canvas>
+				<div id="codePreviev"></div>
+			</div>
+		</div>
+		<div id="wrap-right">
+			<div class="header">source</div>
+			<textarea id="input">
+print("hello world\n\r");
+a=10+12*(6-1);
+print(a);
+print(" ");
+printc(10+12*5);
+if(3>2){
+ print(" true\n\r");
+}
+b=1;
+while(1){
+ b=b+1;
+ print(b);
+ if(b>10){goto(end);}
+}			
+end:			
+			</textarea>
+			<div id="hint">:</div>
+		</div>
+	</div>
+	<div class="header">information</div>
+	<div id="alert"></div>
+	<script type="text/javascript" src="FileSaver.js"></script>
+	<script type="text/javascript" src="compil2.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="cpu.js"></script>	
+</body>
+</html>
